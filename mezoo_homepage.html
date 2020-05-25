@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+  <title>메쥬 - MEZOO(Medical Equipment Zoo)</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  <style>
+  *{ font-size: 12px; }
+  h1{ font-size: 3.33em; } /*40px*/
+  h2{ font-size: 2.08em; } /*25px*/
+  h3{ font-size: 1.66em; } /*20px*/
+  h4{ font-size: 1.5em; } /*18px*/
+  h5{ font-size: 1.25em; } /*15px*/
+  h6{ font-size: 0.83em; } /*10px*/
+
+  #screen1{
+    box-sizing: border-box;
+    width: 100vw; margin: 0px; padding: 0px; height: 100%;
+    background-image:url("http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    #topgrid{
+      display: grid;
+      width: 100%; margin: 0px; padding: 0px;
+      grid-template-columns: 150px 1fr;
+      grid-template-rows: 70px;
+      border-bottom: 1px #a6a6a6 solid;
+    }
+    #homelogo{
+      box-sizing: border-box;
+      display: block;
+      margin: 0px; padding: 20px;
+    }
+    #menugrid{
+      box-sizing: border-box;
+      display: block;
+    }
+    #menugrid ul{
+      width: 600px; height: 50px; padding: 0px;
+      margin: 25px auto;
+    }
+    #menugrid ul li{
+      list-style: none;
+      float: left;
+    }
+    #menugrid .menulink{
+      text-decoration: none;
+      display: block;
+      width: 100px;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      font-family: 'Bellota Text', cursive;
+    }
+    #menugrid .menulink:hover{
+      color: pink;
+    }
+    #screen1 h1{
+      margin-top: 170px;
+      text-align: center;
+      color: white;
+      font-family: 'Bellota Text', cursive;
+    }
+    #screen1 h4{
+      margin-top: 10px;
+      margint-bottom: 20px;
+      text-align: center;
+      color: #c6c6c6;
+      font-family: 'Bellota Text', cursive;
+    }
+    #button1{
+      width: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #screen1 button{
+      display: inline-block;
+      width: 60px; height: 35px;
+      background-color: #D53580;
+      border: none;
+      border-radius: 15px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+    }
+    .advertising{
+      margin: 30px;
+      text-align: center;
+    }
+    .ad1{
+      margin: 0px; padding: 2px;
+      color: #D53580;
+      font-family: 'Bellota Text', cursive;
+    }
+    .ad2{
+      margin: 0px; padding: 2px;
+      font-family: 'Bellota Text', cursive;
+    }
+    .ad3{
+      margin: 0px; padding: 2px;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .bigimage{
+      display: block;
+      width: 1050px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #newstitle{
+      margin: 0px; padding: 2px;
+      text-align: center;
+      font-family: 'Bellota Text', cursive;
+    }
+    #newsdescript{
+      margin: 0px; padding: 2px;
+      text-align: center;
+      font-size: 10px;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    #contact{
+      box-sizing: border-box;
+      width: 100%; margin: 0px; padding: 0px; height: 350px;
+      background-image:url("http://me-zoo.com/theme/dalbit2/img/bg_footerTop2.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+      }
+    #contacttitle{
+      margin: 0px; padding-top: 50px; padding-left: 15px;
+      color: white;
+      font-size: 50px;
+      font-family: 'Bellota Text', cursive;
+    }
+    #contactcontent{
+      margin: 0px; padding-top: 40px; padding-left: 15px;
+      color: white;
+      opacity: 0.9;
+      font-size: 18px;
+      font-family: 'Noto Sans KR', sans-sans-serif;
+    }
+    #button2{
+      width: 250px;
+      padding-top: 35px;
+      padding-left: 15px;
+    }
+    #button2 button{
+      display: inline-block;
+      width: 250px; height: 35px;
+      background-color: white;
+      border: none;
+      border-radius: 15px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 10px;
+    }
+    footer{
+      box-sizing: border-box;
+      width: 100%; margin: 0px; padding: 0px;
+      background-color: #3d3d3d;
+      }
+    #footer1{
+      padding-top: 50px;
+      text-align: center;
+      font-size: 13px;
+      color: white;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    #footer2{
+      padding-top: 10px;
+      width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: 13px;
+      color: #939393;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    footer ul li{
+      float: left;
+      margin-right: 30px;
+    }
+    #footerlogo{
+      padding-top: 30px;
+      padding-bottom: 70px;
+      width:100px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body style="margin:0px; padding:0px;">
+  <div id="screen1">
+    <div id="topgrid">
+      <div id="homelogo">
+        <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width="100%">
+      </div>
+      <div id="menugrid">
+        <nav>
+          <ul>
+            <li><a class="menulink" href="#">Home</a></li>
+            <li><a class="menulink" href="#hicardi">HiCardi</a></li>
+            <li><a class="menulink" href="#vetwave">Vetwave</a></li>
+            <li><a class="menulink" href="#microbic">MicroBIC</a></li>
+            <li><a class="menulink" href="#support">Support</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <h1>Digital Health<br>&<br>IoMT Frontier</h1>
+    <h4>Biomedical Sensor Technology<br>Biomedical Signal Processing Algorithm<br>IoMT Solutions</h4>
+    <div id="button1">
+      <button>News</button>
+    </div>
+  </div>
+  <div id="hicardi" class="advertising">
+    <h1 class="ad1">HiCardi</h1>
+    <h6 class="ad2">Mobile Cardiac Telemetry for Human</h6>
+    <h2 class="ad3">안녕? 나의 심장</h2>
+    <h6 class="ad2">Say 'Hi' to your heart</h6>
+  </div>
+  <div id="vetwave" class="bigimage">
+    <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_01.png" width="100%">
+  </div>
+  <div class="advertising">
+    <h1 class="ad1">Vetwave</h1>
+    <h6 class="ad2">Mobile Cardiac Telemetry for Animal</h6>
+    <h2 class="ad3">지금입니다. 동물들도 건강관리를 시작할 때</h2>
+    <h6 class="ad2">Now is the time. To start monitoring your pet</h6>
+  </div>
+  <div id="microbic" class="bigimage">
+    <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_02.png" width="100%">
+  </div>
+  <div class="advertising">
+    <h1 class="ad1">microBIC</h1>
+    <h2 class="ad3">혁신적인 지능형 생체신호 모듈</h2>
+    <h6 class="ad2">Intelligent Biomedical Signal Processor</h6>
+  </div>
+  <div class="bigimage">
+    <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_03.png" width="100%">
+  </div>
+  <div class="news">
+<!--
+  <div class="image">
+    로고<img src="http://me-zoo.com/theme/dalbit2/img/logo_preloader.png" width="30%">
+    사람소파<img src="http://me-zoo.com/theme/dalbit2/img/bg_footerTop2.jpg" width="30%">
+    운동<img src="http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg" width="30%">
+    로고흰색<img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width="30%">
+    hicardi<img src="http://me-zoo.com/theme/dalbit2/img/mProd2_01.png" width="30%">
+    강아지<img src="http://me-zoo.com/theme/dalbit2/img/mProd2_02.png" width="30%">
+    로봇<img src="http://me-zoo.com/theme/dalbit2/img/mProd2_03.png" width="30%">
+  </div>
+-->
+  <div id="news">
+    <h2 id="newstitle">Latest News</h2>
+    <p id="newdescript">최근뉴스</p>
+  </div>
+  <div id="contact">
+    <p id="contacttitle">Contact</p>
+    <p id="contactcontent">메쥬의 전문가와 상담하세요</p>
+    <div id="button2">
+      <button>help@me-zoo.com</button>
+    </div>
+  </div>
+</body>
+<footer>
+  <div id="footer1">
+    (26354)강원도 원주시 지정면 기업도시로 200 의료기기종합지원센터 8층 808호
+    <br>8F #808 Medical Device Complex Center, Gieopdosi-ro(st) 200, Jijeong-myeon, Wonju-si, Gangwon-do, Republic of Korea
+  </div>
+  <div id="footer2">
+    <ul>
+      <li>Email:help@me-zoo.com</li>
+      <li>Phone: +82-33-761-2006</li>
+      <li>Fax: +82-33-761-2036</li>
+    </ul>
+    <br><br>Copyright 2019 MEZOO.Co.Ltd.All rights reserved.
+  </div>
+  <div id="footerlogo">
+    <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width="100%">
+  </div>
+</footer>
+</html>
