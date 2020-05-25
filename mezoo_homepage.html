@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
   <style>
   *{ font-size: 12px; }
   h1{ font-size: 3.33em; } /*40px*/
@@ -16,7 +17,7 @@
 
   #screen1{
     box-sizing: border-box;
-    width: 100vw; margin: 0px; padding: 0px; height: 100%;
+    width: 100v%; margin: 0px; padding: 0px; height: 100vh;
     background-image:url("http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg");
     background-attachment: fixed;
     background-size: cover;
@@ -85,6 +86,10 @@
       text-decoration: none;
       color: white;
     }
+    #screen1 button:hover{
+      box-shadow: 0px 3px 4px 3px rgba(213, 53, 128, 0.4);
+      transition-duration: 0.3s;
+    }
     .advertising{
       margin: 30px;
       text-align: center;
@@ -108,15 +113,40 @@
       margin-left: auto;
       margin-right: auto;
     }
+    #wrap{
+      margin:0 auto;
+      width:300px;
+    }
+    #tothetop{
+      display:inline-block;
+      background-color: #939393;
+      width:50px;
+      height:50px;
+      text-align:center;
+      position: fixed;
+      bottom:30px;
+      right:30px;
+      transition: background-color .3s, opacity .5s, visibility .5s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+    #tothetop::after{
+
+    }
+    #news{
+      box-sizing: border-box;
+      width: 100v%; margin: 0px; padding: 0px; height: 350px;
+      }
     #newstitle{
-      margin: 0px; padding: 2px;
+      margin: 0px; padding-top: 10px;
       text-align: center;
       font-family: 'Bellota Text', cursive;
     }
     #newsdescript{
-      margin: 0px; padding: 2px;
+      margin: 0px; padding: 10px;
       text-align: center;
-      font-size: 10px;
+      font-size: 13px;
       font-family: 'Noto Sans KR', sans-serif;
     }
     #contact{
@@ -153,6 +183,10 @@
       text-align: center;
       text-decoration: none;
       font-size: 10px;
+    }
+    #button2 button:hover{
+      box-shadow: 0px 6px 4px 3px rgba(146, 146, 146, 0.4);
+      transition-duration: 0.5s;
     }
     footer{
       box-sizing: border-box;
@@ -202,8 +236,8 @@
             <li><a class="menulink" href="#">Home</a></li>
             <li><a class="menulink" href="#hicardi">HiCardi</a></li>
             <li><a class="menulink" href="#vetwave">Vetwave</a></li>
-            <li><a class="menulink" href="#microbic">MicroBIC</a></li>
-            <li><a class="menulink" href="#support">Support</a></li>
+            <li><a class="menulink" href="#microbic">&micro;BIC</a></li>
+            <li><a class="menulink" href="#contact">Support</a></li>
           </ul>
         </nav>
       </div>
@@ -220,6 +254,9 @@
     <h2 class="ad3">안녕? 나의 심장</h2>
     <h6 class="ad2">Say 'Hi' to your heart</h6>
   </div>
+  <div id="wrap">
+    <a id="tothetop"></a>
+  </div>
   <div id="vetwave" class="bigimage">
     <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_01.png" width="100%">
   </div>
@@ -233,14 +270,13 @@
     <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_02.png" width="100%">
   </div>
   <div class="advertising">
-    <h1 class="ad1">microBIC</h1>
+    <h1 class="ad1">&micro;BIC</h1>
     <h2 class="ad3">혁신적인 지능형 생체신호 모듈</h2>
     <h6 class="ad2">Intelligent Biomedical Signal Processor</h6>
   </div>
   <div class="bigimage">
     <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_03.png" width="100%">
   </div>
-  <div class="news">
 <!--
   <div class="image">
     로고<img src="http://me-zoo.com/theme/dalbit2/img/logo_preloader.png" width="30%">
@@ -254,7 +290,7 @@
 -->
   <div id="news">
     <h2 id="newstitle">Latest News</h2>
-    <p id="newdescript">최근뉴스</p>
+    <p id="newsdescript">최근뉴스</p>
   </div>
   <div id="contact">
     <p id="contacttitle">Contact</p>
