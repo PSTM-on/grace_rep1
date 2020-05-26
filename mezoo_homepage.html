@@ -6,6 +6,8 @@
   <meta name ="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>메쥬 - MEZOO(Medical Equipment Zoo)</title>
 
     <style>
@@ -44,45 +46,99 @@
       h5{ font-size: 14px; }
       h6{ font-size: 10px; }
 
-      /*main*/
-      #main{
-        width: auto; margin: 0px; padding: 0px; height: 100vh;
-        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url("http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg");
-        background-attachment: fixed;
-        background-size: cover;
+      /*Header*/
+      @media screen and (max-width: 960px){
+        #main{
+          width: auto; margin: 0px; padding: 0px; height: calc(100vmin);
+          background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url("http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg");
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center center;
+        }
+        #main header{
+          height: 70px;
+          border-bottom: 1px solid rgba(217, 217, 217, 0.3);
+          overflow: hidden;
+        }
+        #main #menu_icon{
+          padding-left: 15px; padding-top: 25px;
+          float: left;
+        }
+        #main #header_logo{
+          padding-left: 30px; padding-top: 20px;
+          width: 105px;
+          float: left;
+        }
+        #main #header_menu{
+
+        }
+        #main ul li a{
+          display: none;
+          width: 70px; height: 70px; padding: 24px;
+          float: left; text-align: center;
+          color: white;
+          font-size: 20px;
+          font-family: 'Bellota Text', cursive;
+        }
+        #main ul li a:hover{
+          color: rgba(217, 217, 217, 0.7);
+          transition-duration: 0.3s;
+        }
+        #main section h1{
+          margin-top: 20vmin;
+        }
+        #main section h4{
+          margin-bottom: 5vmin;
+        }
       }
 
-      /*Header*/
-      #main header{
-        display: grid;
-        width: 100%; margin: 0px; padding: 0px;
-        grid-template-columns: 120px 1fr;
-        grid-template-rows: 70px;
-        border-bottom: 1px solid rgba(217, 217, 217, 0.3);
-        overflow: hidden;
-      }
-      #main #header_logo{
-        padding-left: 15px; padding-top: 20px;
-      }
-      #main #header_menu{
-        width: 600px; height: 70px; padding: 0px;
-        margin: auto;
-      }
-      #main ul li a{
-        width: 70px; height: 70px; padding: 24px;
-        float: left; text-align: center;
-        color: white;
-        font-size: 20px;
-        font-family: 'Bellota Text', cursive;
-      }
-      #main ul li a:hover{
-        color: rgba(217, 217, 217, 0.7);
-        transition-duration: 0.3s;
+      @media screen and (min-width: 961px){
+        #main{
+          width: auto; margin: 0px; padding: 0px; height: 100vh;
+          background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url("http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg");
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center center;
+        }
+        #main header{
+          display: grid;
+          width: 100%; margin: 0px; padding: 0px;
+          grid-template-columns: 120px 1fr;
+          grid-template-rows: 70px;
+          border-bottom: 1px solid rgba(217, 217, 217, 0.3);
+          overflow: hidden;
+        }
+        #main #menu_icon{
+          display: none;
+        }
+        #main #header_logo{
+          padding-left: 15px; padding-top: 20px;
+        }
+        #main #header_menu{
+          width: 600px; height: 70px; padding: 0px;
+          margin: auto;
+        }
+        #main ul li a{
+          width: 70px; height: 70px; padding: 24px;
+          float: left; text-align: center;
+          color: white;
+          font-size: 20px;
+          font-family: 'Bellota Text', cursive;
+        }
+        #main ul li a:hover{
+          color: rgba(217, 217, 217, 0.7);
+          transition-duration: 0.3s;
+        }
+        #main section h1{
+          margin-top: 200px;
+        }
+        #main section h4{
+          margin-bottom: 40px;
+        }
       }
 
       /*main_page*/
       #main section h1{
-        margin-top: 200px;
         line-height: 50px;
         text-align: center;
         color: white;
@@ -90,7 +146,6 @@
       }
       #main section h4{
         margin-top: 10px;
-        margin-bottom: 50px;
         line-height: 30px;
         text-align: center;
         color: #c6c6c6;
@@ -134,7 +189,7 @@
       }
       .product_image{
         display: block;
-        width: 1050px;
+        width: 100vw;
         margin: 0 auto;
       }
 
@@ -162,6 +217,7 @@
         background-image:url("http://me-zoo.com/theme/dalbit2/img/bg_footerTop2.jpg");
         background-attachment: fixed;
         background-size: cover;
+        background-position: center center;
         }
       #contact #title{
         margin: 0px; padding-top: 50px; padding-left: 15px;
@@ -226,8 +282,11 @@
   <div id="main">
 
     <header>
+      <div id="menu_icon">
+        <i class="fas fa-bars" style="color:white; font-size:20px"></i>
+      </div>
       <div id="header_logo">
-        <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png", width=100%>
+        <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width=100%>
       </div>
       <nav id="header_menu">
         <ul>
