@@ -1,320 +1,312 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-  <title>메쥬 - MEZOO(Medical Equipment Zoo)</title>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-  <style>
-  *{ font-size: 12px; }
-  h1{ font-size: 3.33em; } /*40px*/
-  h2{ font-size: 2.08em; } /*25px*/
-  h3{ font-size: 1.66em; } /*20px*/
-  h4{ font-size: 1.5em; } /*18px*/
-  h5{ font-size: 1.25em; } /*15px*/
-  h6{ font-size: 0.83em; } /*10px*/
+  <title>메쥬 - MEZOO(Medical Equipment Zoo)</title>
 
-  #screen1{
-    box-sizing: border-box;
-    width: 100v%; margin: 0px; padding: 0px; height: 100vh;
-    background-image:url("http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    }
-    #topgrid{
-      display: grid;
-      width: 100%; margin: 0px; padding: 0px;
-      grid-template-columns: 150px 1fr;
-      grid-template-rows: 70px;
-      border-bottom: 1px #a6a6a6 solid;
-    }
-    #homelogo{
-      box-sizing: border-box;
-      display: block;
-      margin: 0px; padding: 20px;
-    }
-    #menugrid{
-      box-sizing: border-box;
-      display: block;
-    }
-    #menugrid ul{
-      width: 600px; height: 50px; padding: 0px;
-      margin: 25px auto;
-    }
-    #menugrid ul li{
-      list-style: none;
-      float: left;
-    }
-    #menugrid .menulink{
-      text-decoration: none;
-      display: block;
-      width: 100px;
-      text-align: center;
-      color: white;
-      font-size: 20px;
-      font-family: 'Bellota Text', cursive;
-    }
-    #menugrid .menulink:hover{
-      color: pink;
-    }
-    #screen1 h1{
-      margin-top: 170px;
-      text-align: center;
-      color: white;
-      font-family: 'Bellota Text', cursive;
-    }
-    #screen1 h4{
-      margin-top: 10px;
-      margint-bottom: 20px;
-      text-align: center;
-      color: #c6c6c6;
-      font-family: 'Bellota Text', cursive;
-    }
-    #button1{
-      width: 50px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    #screen1 button{
-      display: inline-block;
-      width: 60px; height: 35px;
-      background-color: #D53580;
-      border: none;
-      border-radius: 15px;
-      text-align: center;
-      text-decoration: none;
-      color: white;
-    }
-    #screen1 button:hover{
-      box-shadow: 0px 3px 4px 3px rgba(213, 53, 128, 0.4);
-      transition-duration: 0.3s;
-    }
-    .advertising{
-      margin: 30px;
-      text-align: center;
-    }
-    .ad1{
-      margin: 0px; padding: 2px;
-      color: #D53580;
-      font-family: 'Bellota Text', cursive;
-    }
-    .ad2{
-      margin: 0px; padding: 2px;
-      font-family: 'Bellota Text', cursive;
-    }
-    .ad3{
-      margin: 0px; padding: 2px;
-      font-family: 'Noto Sans KR', sans-serif;
-    }
-    .bigimage{
-      display: block;
-      width: 1050px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    #wrap{
-      margin:0 auto;
-      width:300px;
-    }
-    #tothetop{
-      display:inline-block;
-      background-color: #939393;
-      width:50px;
-      height:50px;
-      text-align:center;
-      position: fixed;
-      bottom:30px;
-      right:30px;
-      transition: background-color .3s, opacity .5s, visibility .5s;
-      opacity: 0;
-      visibility: hidden;
-      z-index: 1000;
-    }
-    #tothetop::after{
+    <style>
+      /*초기화*/
+      /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)*/
+      html,body,div,span,applet,object,iframe,
+      h1,h2,h3,h4,h5,h6,p,blockquote,button,
+      pre,a,em,img,i,center,dl,dt,dd,ol,ul,li,
+      form,label,article,aside,figure,figcaption,footer,header,menu,nav,section {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit
+        vertical-align: baseline;
+        text-decoration: none;
+      }
 
-    }
-    #news{
-      box-sizing: border-box;
-      width: 100v%; margin: 0px; padding: 0px; height: 350px;
+      /* HTML5 display-role reset for older browsers */
+      article,aside,figcaption,figure,footer,header,hgroup,menu,nav,section {
+        display: block;
       }
-    #newstitle{
-      margin: 0px; padding-top: 10px;
-      text-align: center;
-      font-family: 'Bellota Text', cursive;
-    }
-    #newsdescript{
-      margin: 0px; padding: 10px;
-      text-align: center;
-      font-size: 13px;
-      font-family: 'Noto Sans KR', sans-serif;
-    }
-    #contact{
-      box-sizing: border-box;
-      width: 100%; margin: 0px; padding: 0px; height: 350px;
-      background-image:url("http://me-zoo.com/theme/dalbit2/img/bg_footerTop2.jpg");
-      background-attachment: fixed;
-      background-size: cover;
+
+      body {
+        line-height: 1;
       }
-    #contacttitle{
-      margin: 0px; padding-top: 50px; padding-left: 15px;
-      color: white;
-      font-size: 50px;
-      font-family: 'Bellota Text', cursive;
-    }
-    #contactcontent{
-      margin: 0px; padding-top: 40px; padding-left: 15px;
-      color: white;
-      opacity: 0.9;
-      font-size: 18px;
-      font-family: 'Noto Sans KR', sans-sans-serif;
-    }
-    #button2{
-      width: 250px;
-      padding-top: 35px;
-      padding-left: 15px;
-    }
-    #button2 button{
-      display: inline-block;
-      width: 250px; height: 35px;
-      background-color: white;
-      border: none;
-      border-radius: 15px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 10px;
-    }
-    #button2 button:hover{
-      box-shadow: 0px 6px 4px 3px rgba(146, 146, 146, 0.4);
-      transition-duration: 0.5s;
-    }
-    footer{
-      box-sizing: border-box;
-      width: 100%; margin: 0px; padding: 0px;
-      background-color: #3d3d3d;
+
+      ol,ul {
+        list-style: none;
       }
-    #footer1{
-      padding-top: 50px;
-      text-align: center;
-      font-size: 13px;
-      color: white;
-      font-family: 'Noto Sans KR', sans-serif;
-    }
-    #footer2{
-      padding-top: 10px;
-      width: 550px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      font-size: 13px;
-      color: #939393;
-      font-family: 'Noto Sans KR', sans-serif;
-    }
-    footer ul li{
-      float: left;
-      margin-right: 30px;
-    }
-    #footerlogo{
-      padding-top: 30px;
-      padding-bottom: 70px;
-      width:100px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
+      *{ font-size: 12px; }
+      h1{ font-size: 40px; }
+      h2{ font-size: 25px; }
+      h3{ font-size: 20px; }
+      h4{ font-size: 18px; }
+      h5{ font-size: 14px; }
+      h6{ font-size: 10px; }
+
+      /*main*/
+      #main{
+        width: auto; margin: 0px; padding: 0px; height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url("http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      /*Header*/
+      #main header{
+        display: grid;
+        width: 100%; margin: 0px; padding: 0px;
+        grid-template-columns: 120px 1fr;
+        grid-template-rows: 70px;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.3);
+        overflow: hidden;
+      }
+      #main #header_logo{
+        padding-left: 15px; padding-top: 20px;
+      }
+      #main #header_menu{
+        width: 600px; height: 70px; padding: 0px;
+        margin: auto;
+      }
+      #main ul li a{
+        width: 70px; height: 70px; padding: 24px;
+        float: left; text-align: center;
+        color: white;
+        font-size: 20px;
+        font-family: 'Bellota Text', cursive;
+      }
+      #main ul li a:hover{
+        color: rgba(217, 217, 217, 0.7);
+        transition-duration: 0.3s;
+      }
+
+      /*main_page*/
+      #main section h1{
+        margin-top: 200px;
+        line-height: 50px;
+        text-align: center;
+        color: white;
+        font-family: 'Bellota Text', cursive;
+      }
+      #main section h4{
+        margin-top: 10px;
+        margin-bottom: 50px;
+        line-height: 30px;
+        text-align: center;
+        color: #c6c6c6;
+        font-family: 'Bellota Text', cursive;
+      }
+      #main #button_news{
+        width: 60px;
+        margin: 0 auto;
+      }
+      #main button{
+        display: inline-block;
+        width: 60px; height: 35px;
+        background-color: #D53580;
+        border: none; border-radius: 15px;
+        text-align: center;
+        color: white;
+      }
+      #main button:hover{
+        box-shadow: 0px 3px 4px 1px rgba(213, 53, 128, 0.4);
+        transition-duration: 0.2s;
+      }
+
+      /*Product Description*/
+      .product_descript{
+        margin: 30px;
+        text-align: center;
+      }
+      .descript1{
+        margin: 0px; padding: 5px;
+        color: #D53580;
+        font-family: 'Bellota Text', cursive;
+      }
+      .descript2{
+        margin: 0px; padding: 5px;
+        color: #525252;
+        font-family: 'Bellota Text', cursive;
+      }
+      .descript3{
+        margin: 0px; padding: 5px;
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+      .product_image{
+        display: block;
+        width: 1050px;
+        margin: 0 auto;
+      }
+
+      /*News*/
+      #news{
+        box-sizing: border-box;
+        width: 100v%; margin: 0px; padding: 0px; height: 350px;
+        }
+      #news #title{
+        margin: 0px; padding-top: 10px;
+        text-align: center;
+        font-family: 'Bellota Text', cursive;
+      }
+      #news #descript{
+        margin: 0px; padding: 10px;
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+
+      /*Contact*/
+      #contact{
+        box-sizing: border-box;
+        width: 100%; margin: 0px; padding: 0px; height: 350px;
+        background-image:url("http://me-zoo.com/theme/dalbit2/img/bg_footerTop2.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        }
+      #contact #title{
+        margin: 0px; padding-top: 50px; padding-left: 15px;
+        color: white; font-size: 50px;
+        font-family: 'Bellota Text', cursive;
+      }
+      #contact #content{
+        margin: 0px; padding-top: 40px; padding-left: 15px;
+        color: white; opacity: 0.9; font-size: 18px;
+        font-family: 'Noto Sans KR', sans-sans-serif;
+      }
+      #button_contact{
+        width: 250px;
+        padding-top: 35px; padding-left: 15px;
+      }
+      #button_contact button{
+        display: inline-block;
+        width: 250px; height: 35px;
+        background-color: white;
+        border: none; border-radius: 15px;
+        text-align: center;
+        font-size: 11px;
+      }
+      #button_contact button:hover{
+        box-shadow: 0px 6px 4px 3px rgba(146, 146, 146, 0.4);
+        transition-duration: 0.5s;
+      }
+
+      /*Footer*/
+      footer{
+        box-sizing: border-box;
+        width: 100%; margin: 0px; padding: 40px;
+        background-color: #3d3d3d;
+        }
+      #footer_address{
+        line-height: 20px;
+        text-align: center;
+        font-size: 13px; color: white;
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+      #footer_contact{
+        line-height: 15px;
+        width: 550px; margin: 20px auto;
+        text-align: center;
+        font-size: 13px; color: #939393;
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+      footer ul li{
+        float: left;
+        margin-right: 30px;
+      }
+      #footer_logo{
+        padding-top: 30px; padding-bottom: 70px;
+        width:100px;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
 </head>
-<body style="margin:0px; padding:0px;">
-  <div id="screen1">
-    <div id="topgrid">
-      <div id="homelogo">
-        <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width="100%">
+
+<body>
+  <div id="main">
+
+    <header>
+      <div id="header_logo">
+        <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png", width=100%>
       </div>
-      <div id="menugrid">
-        <nav>
-          <ul>
-            <li><a class="menulink" href="#">Home</a></li>
-            <li><a class="menulink" href="#hicardi">HiCardi</a></li>
-            <li><a class="menulink" href="#vetwave">Vetwave</a></li>
-            <li><a class="menulink" href="#microbic">&micro;BIC</a></li>
-            <li><a class="menulink" href="#contact">Support</a></li>
-          </ul>
-        </nav>
+      <nav id="header_menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#hicardi">HiCardi</a></li>
+          <li><a href="#vetwave">Vetwave</a></li>
+          <li><a href="#microbic">&micro;BIC</a></li>
+          <li><a href="#contact">Support</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h1>Digital Health<br>&<br />IoMT Frontier</h1>
+      <h4>Biomedical Sensor Technology<br>Biomedical Signal Processing Algorithm<br>IoMT Solutions</h4>
+      <div id="button_news">
+        <button>News</button>
       </div>
+    </section>
+  </div>
+
+  <section id="product_intro">
+    <div class="product_descript">
+      <h1 class="descript1">HiCardi</h1>
+      <h5 class="descript2">Mobile Cardiac Telemetry for Human</h5>
+      <h2 class="descript3">안녕? 나의 심장</h2>
+      <h5 class="descript2">Say 'Hi' to your heart</h5>
     </div>
-    <h1>Digital Health<br>&<br>IoMT Frontier</h1>
-    <h4>Biomedical Sensor Technology<br>Biomedical Signal Processing Algorithm<br>IoMT Solutions</h4>
-    <div id="button1">
-      <button>News</button>
+    <div class="product_image">
+      <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_01.png" width="100%">
     </div>
-  </div>
-  <div id="hicardi" class="advertising">
-    <h1 class="ad1">HiCardi</h1>
-    <h6 class="ad2">Mobile Cardiac Telemetry for Human</h6>
-    <h2 class="ad3">안녕? 나의 심장</h2>
-    <h6 class="ad2">Say 'Hi' to your heart</h6>
-  </div>
-  <div id="wrap">
-    <a id="tothetop"></a>
-  </div>
-  <div id="vetwave" class="bigimage">
-    <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_01.png" width="100%">
-  </div>
-  <div class="advertising">
-    <h1 class="ad1">Vetwave</h1>
-    <h6 class="ad2">Mobile Cardiac Telemetry for Animal</h6>
-    <h2 class="ad3">지금입니다. 동물들도 건강관리를 시작할 때</h2>
-    <h6 class="ad2">Now is the time. To start monitoring your pet</h6>
-  </div>
-  <div id="microbic" class="bigimage">
-    <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_02.png" width="100%">
-  </div>
-  <div class="advertising">
-    <h1 class="ad1">&micro;BIC</h1>
-    <h2 class="ad3">혁신적인 지능형 생체신호 모듈</h2>
-    <h6 class="ad2">Intelligent Biomedical Signal Processor</h6>
-  </div>
-  <div class="bigimage">
-    <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_03.png" width="100%">
-  </div>
-<!--
-  <div class="image">
-    로고<img src="http://me-zoo.com/theme/dalbit2/img/logo_preloader.png" width="30%">
-    사람소파<img src="http://me-zoo.com/theme/dalbit2/img/bg_footerTop2.jpg" width="30%">
-    운동<img src="http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg" width="30%">
-    로고흰색<img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width="30%">
-    hicardi<img src="http://me-zoo.com/theme/dalbit2/img/mProd2_01.png" width="30%">
-    강아지<img src="http://me-zoo.com/theme/dalbit2/img/mProd2_02.png" width="30%">
-    로봇<img src="http://me-zoo.com/theme/dalbit2/img/mProd2_03.png" width="30%">
-  </div>
--->
-  <div id="news">
-    <h2 id="newstitle">Latest News</h2>
-    <p id="newsdescript">최근뉴스</p>
-  </div>
-  <div id="contact">
-    <p id="contacttitle">Contact</p>
-    <p id="contactcontent">메쥬의 전문가와 상담하세요</p>
-    <div id="button2">
+    <div class="product_descript">
+      <h1 class="descript1">Vetwave</h1>
+      <h5 class="descript2">Mobile Cardiac Telemetry for Animal</h5>
+      <h2 class="descript3">지금입니다. 동물들도 건강관리를 시작할 때</h2>
+      <h5 class="descript2">Now is the time. To start monitoring your pet</h5>
+    </div>
+    <div class="product_image">
+      <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_02.png" width="100%">
+    </div>
+    <div class="product_descript">
+      <h1 class="descript1">&micro;BIC</h1>
+      <h2 class="descript3">혁신적인 지능형 생체신호 모듈</h2>
+      <h5 class="descript2">Intelligent Biomedical Signal Processor</h5>
+    </div>
+    <div class="product_image">
+      <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_03.png" width="100%">
+    </div>
+  </section>
+
+  <section id="news">
+    <h2 id="title">Latest News</h2>
+    <p id="descript">최근뉴스</p>
+  </section>
+  <section id="contact">
+    <p id="title">Contact</p>
+    <p id="content">메쥬의 전문가와 상담하세요</p>
+    <div id="button_contact">
       <button>help@me-zoo.com</button>
     </div>
-  </div>
+  </section>
+
+  <footer>
+    <div id="footer_address">
+      (26354)강원도 원주시 지정면 기업도시로 200 의료기기종합지원센터 8층 808호
+      <br>8F #808 Medical Device Complex Center, Gieopdosi-ro(st) 200, Jijeong-myeon, Wonju-si, Gangwon-do, Republic of Korea
+    </div>
+    <div id="footer_contact">
+      <ul>
+        <li>Email:help@me-zoo.com</li>
+        <li>Phone: +82-33-761-2006</li>
+        <li>Fax: +82-33-761-2036</li>
+      </ul>
+      <br><br>Copyright 2019 MEZOO.Co.Ltd.All rights reserved.
+    </div>
+    <div id="footer_logo">
+      <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width="100%">
+    </div>
+  </footer>
+
 </body>
-<footer>
-  <div id="footer1">
-    (26354)강원도 원주시 지정면 기업도시로 200 의료기기종합지원센터 8층 808호
-    <br>8F #808 Medical Device Complex Center, Gieopdosi-ro(st) 200, Jijeong-myeon, Wonju-si, Gangwon-do, Republic of Korea
-  </div>
-  <div id="footer2">
-    <ul>
-      <li>Email:help@me-zoo.com</li>
-      <li>Phone: +82-33-761-2006</li>
-      <li>Fax: +82-33-761-2036</li>
-    </ul>
-    <br><br>Copyright 2019 MEZOO.Co.Ltd.All rights reserved.
-  </div>
-  <div id="footerlogo">
-    <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width="100%">
-  </div>
-</footer>
+
 </html>
