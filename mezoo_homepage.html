@@ -5,14 +5,21 @@
   <meta charset="utf-8">
   <meta name ="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet" />
   <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  <link rel="stylesheet" type="text/css" href="semantic/semantic.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="semantic/semantic.min.js"></script>
+  <link rel="stylesheet" href="owl_carousel/owl.carousel.css">
+  <link rel="stylesheet" href="owl_carousel/owl.theme.default.css">
+  <script src="owl_carousel/jquery.min.js"></script>
+  <script src="owl_carousel/owl.carousel.js"></script>
   <title>메쥬 - MEZOO(Medical Equipment Zoo)</title>
   <style>
       /*초기화*/
       /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)*/
       html,body,div,span,applet,object,iframe,
-      p,blockquote,button,pre,a,em,img,i,center,dl,dt,dd,ol,ul,li,
+      p,i,blockquote,button,pre,a,em,img,center,dl,dt,dd,ol,ul,li,
       form,label,article,aside,figure,figcaption,footer,header,menu,nav,section {
         margin: 0;
         padding: 0;
@@ -49,72 +56,20 @@
           background-attachment: fixed;
           background-size: cover;
           background-position: center center;
-          z-index: -5;
-        }
-        section, footer{
-          position: relative;
-        }
-        #sidebar{
-          position: absolute;
-          padding: 25px 10px 25px 15px;
-          text-align: left;
-          overflow: hidden;
-        }
-        #sidebar input.input_checkbox{
-          position:absolute;
-          top: 0; left: 0; opacity: 0;
-          cursor: pointer;
-          z-index: 5;
-          width: 45px; height: 66px;
-        }
-        #sidebar i{
-          float: left;
-          display: block;
-          width: 50px; height: 50px;
-          z-index: 3;
-        }
-        #menu_button ~ #sidebar_menu{
-          display:none;
-        }
-        #menu_button:checked ~ #sidebar_menu{
-          display: block;
-          position: fixed;
-          width: 250px;
-        }
-        #menu_button:checked ~ #sidebar_menu ul{
-          width: 100%;
-        }
-        #menu_button:checked ~ #main{
-          position: absolute;
-          left: 250px;
-        }
-        #menu_button:checked ~ #sidebar_menu{
-          position: fixed;
-          top: 0; left: 0; bottom: 0;
-          background: #2f2f2f;
-          text-align: center;
-          color: white;
-          font-size: 20px;
-          font-family: 'Bellota Text', cursive;
-        }
-        #menu_button:checked ~ #sidebar_menu ul li a{
-          position: relative;
-          display: block;
-          height: 50px;
-          width: 100%;
-        }
-        #menu_button:checked ~ #sidebar_menu ul li a:hover{
-          color: rgba(217, 217, 217, 0.7);
-          transition-duration: 0.3s;
         }
         #main header{
           height: 70px;
           border-bottom: 1px solid rgba(217, 217, 217, 0.3);
           overflow: hidden;
         }
+        #menu_image{
+          margin-left: 15px; padding-top: 20px;
+          float: left;
+        }
         #main #header_logo{
-          margin-left: 52.5px; padding-top: 20px;
+          margin-left: 20px; padding-top: 20px;
           width: 105px;
+          float: left;
         }
         #main #header_menu{
           display: none;
@@ -143,26 +98,29 @@
           border-bottom: 1px solid rgba(217, 217, 217, 0.3);
           overflow: hidden;
         }
-        #sidebar, #sidebar_menu{
+        #menu_image{
           display: none;
         }
-        #main #header_logo{
+        #header_logo{
           padding-left: 15px; padding-top: 20px;
         }
-        #main #header_menu{
+        #header_menu{
           width: 600px; height: 70px; padding: 0px;
           margin: auto;
         }
-        #main ul li a{
+        #header_menu ul li a{
           width: 70px; height: 70px; padding: 24px;
           float: left; text-align: center;
           color: white;
           font-size: 20px;
           font-family: 'Bellota Text', cursive;
         }
-        #main ul li a:hover{
+        #header_menu ul li a:hover{
           color: rgba(217, 217, 217, 0.7);
           transition-duration: 0.3s;
+        }
+        #main header{
+          overflow: hidden;
         }
         #main section h1{
           margin-top: 200px;
@@ -184,11 +142,11 @@
         color: #c6c6c6;
         font-family: 'Bellota Text', cursive;
       }
-      #main #button_news{
+      #button_news{
         width: 60px;
         margin: 0 auto;
       }
-      #main #button_news_text{
+      #button_news_text{
         display: inline-block;
         width: 100%; height: 35px;
         background-color: #D53580;
@@ -196,12 +154,15 @@
         text-align: center;
         color: white;
       }
-      #main #button_news_text:hover{
+      #button_news_text:hover{
         box-shadow: 0px 3px 4px 1px rgba(213, 53, 128, 0.4);
         transition-duration: 0.2s;
       }
 
       /*Product Description*/
+      #product_intro{
+        background-color: #ffffff;
+      }
       .product_descript{
         margin: 30px;
         text-align: center;
@@ -230,6 +191,7 @@
       #news{
         box-sizing: border-box;
         width: 100v%; margin: 0px; padding: 0px; height: 350px;
+        background-color: white;
         }
       #news #title{
         margin: 0px; padding-top: 10px;
@@ -240,6 +202,10 @@
         margin: 0px; padding: 10px;
         text-align: center;
         font-family: 'Noto Sans KR', sans-serif;
+      }
+      #carousel{
+        margin: 10px auto;
+        width: 85vw;
       }
 
       /*Contact*/
@@ -303,30 +269,42 @@
 </head>
 
 <body>
-  <div id="sidebar">
-    <input type="checkbox" class="input_checkbox" id="menu_button">
-    <i class="fas fa-bars" style="color:white; font-size:20px"></i>
-    <label for="menu_button"></label>
-    <nav id="sidebar_menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#hicardi">HiCardi</a></li>
-        <li><a href="#vetwave">Vetwave</a></li>
-        <li><a href="#microbic">&micro;BIC</a></li>
-        <li><a href="#contact">Support</a></li>
-      </ul>
-    </nav>
+  <div class="ui sidebar inverted vertical menu">
+    <div class="ui search">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="검색어를 입력해주세요.">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+    <script>
+      $('.ui.search')
+    .search({ source: Content });
+    </script>
+    <a class="item" href="#main">Home</a>
+    <a class="item" href="#hicardi">HiCardi</a>
+    <a class="item" href="#vetwave">Vetwave</a>
+    <a class="item" href="#microbic">&micro;BIC</a>
+    <a class="item" href="#contact">Support</a>
   </div>
 
-
-  <div id="main">
+  <div id="main"class="dimmed pusher">
     <header>
+      <div id="menu_image">
+        <button id="menu_button" class="ui button"><i class="fas fa-bars" style="color:white; font-size:20px"></i></button>
+      </div>
+      <script>
+        $('#menu_button').click(function(){
+          $('.ui.sidebar').sidebar('toggle');
+        })
+      </script>
+
       <div id="header_logo">
         <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width=100%>
       </div>
       <nav id="header_menu">
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#main">Home</a></li>
           <li><a href="#hicardi">HiCardi</a></li>
           <li><a href="#vetwave">Vetwave</a></li>
           <li><a href="#microbic">&micro;BIC</a></li>
@@ -344,60 +322,142 @@
     </section>
   </div>
 
-    <section id="product_intro">
-      <div class="product_descript">
-        <h1 class="descript1">HiCardi</h1>
-        <h6 class="descript2">Mobile Cardiac Telemetry for Human</h6>
-        <h2 class="descript3">안녕? 나의 심장</h2>
-        <h6 class="descript2">Say 'Hi' to your heart</h6>
-      </div>
-      <div class="product_image">
-        <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_01.png" width="100%">
-      </div>
-      <div class="product_descript">
-        <h1 class="descript1">Vetwave</h1>
-        <h6 class="descript2">Mobile Cardiac Telemetry for Animal</h6>
-        <h2 class="descript3">지금입니다. 동물들도 건강관리를 시작할 때</h2>
-        <h6 class="descript2">Now is the time. To start monitoring your pet</h6>
-      </div>
-      <div class="product_image">
-        <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_02.png" width="100%">
-      </div>
-      <div class="product_descript">
-        <h1 class="descript1">&micro;BIC</h1>
-        <h2 class="descript3">혁신적인 지능형 생체신호 모듈</h2>
-        <h6 class="descript2">Intelligent Biomedical Signal Processor</h6>
-      </div>
-      <div class="product_image">
-        <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_03.png" width="100%">
-      </div>
-    </section>
+  <section id="product_intro" class="dimmed pusher">
+    <div id="hicardi" class="product_descript">
+      <h1 class="descript1">HiCardi</h1>
+      <h6 class="descript2">Mobile Cardiac Telemetry for Human</h6>
+      <h2 class="descript3">안녕? 나의 심장</h2>
+      <h6 class="descript2">Say 'Hi' to your heart</h6>
+    </div>
+    <div class="product_image">
+      <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_01.png" width="100%">
+    </div>
+    <div id="vetwave" class="product_descript">
+      <h1 class="descript1">Vetwave</h1>
+      <h6 class="descript2">Mobile Cardiac Telemetry for Animal</h6>
+      <h2 class="descript3">지금입니다. 동물들도 건강관리를 시작할 때</h2>
+      <h6 class="descript2">Now is the time. To start monitoring your pet</h6>
+    </div>
+    <div class="product_image">
+      <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_02.png" width="100%">
+    </div>
+    <div id="microbic" class="product_descript">
+      <h1 class="descript1">&micro;BIC</h1>
+      <h2 class="descript3">혁신적인 지능형 생체신호 모듈</h2>
+      <h6 class="descript2">Intelligent Biomedical Signal Processor</h6>
+    </div>
+    <div class="product_image">
+      <img src="http://me-zoo.com/theme/dalbit2/img/mProd2_03.png" width="100%">
+    </div>
+  </section>
 
-    <section id="news">
-      <h2 id="title">Latest News</h2>
-      <p id="descript" class="font3">최근뉴스</p>
-    </section>
-    <section id="contact">
-      <p id="title" class="font1">Contact</p>
-      <p id="content" class="font2">메쥬의 전문가와 상담하세요</p>
-      <div id="button_contact">
-        <button class="font4">help@me-zoo.com</button>
+  <section id="news">
+    <h2 id="title">Latest News</h2>
+    <p id="descript" class="font3">최근뉴스</p>
+    <div id="carousel" class="owl-carousel owl-theme">
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
       </div>
-    </section>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+      <div class="item">
+        <div class="mic_icon"><i class="fas fa-microphone-alt" style="color:white; font-size:20px;"></i></div>
+        <div class="item_border"></div>
+      </div>
+    </div>
+    <script>
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+          loop:true,
+          margin:10,
+          autoplay:false,
+          autoplayTimeout:3500,
+          autoplayHoverPause:false,
+          responsiveClass:true,
+          responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:2,
+                nav:false
+            },
+            1000:{
+                items:3,
+                nav:true,
+                loop:false
+              }}
+      });
+      $('.play').on('click',function(){
+          owl.trigger('play.owl.autoplay',[1000])
+      })
+      $('.stop').on('click',function(){
+          owl.trigger('stop.owl.autoplay')
+      })
+    </script>
+  </section>
 
-    <footer>
-      <div id="footer_address" class="font3">
-        (26354)강원도 원주시 지정면 기업도시로 200 의료기기종합지원센터 8층 808호
-        <br>8F #808 Medical Device Complex Center, Gieopdosi-ro(st) 200, Jijeong-myeon, Wonju-si, Gangwon-do, Republic of Korea
-      </div>
-      <div id="footer_contact" class="font3">
-        <br />&middot; Email:help@me-zoo.com &nbsp; &middot; Phone: +82-33-761-2006 &nbsp; &middot; Fax: +82-33-761-2036
-        <br><br>Copyright&copy; 2019 MEZOO.Co.Ltd.All rights reserved.
-      </div>
-      <div id="footer_logo">
-        <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width="100%">
-      </div>
-    </footer>
+  <section id="contact">
+    <p id="title" class="font1">Contact</p>
+    <p id="content" class="font2">메쥬의 전문가와 상담하세요</p>
+    <div id="button_contact">
+      <button class="font4">help@me-zoo.com</button>
+    </div>
+  </section>
+
+  <footer>
+    <div id="footer_address" class="font3">
+      (26354)강원도 원주시 지정면 기업도시로 200 의료기기종합지원센터 8층 808호
+      <br>8F #808 Medical Device Complex Center, Gieopdosi-ro(st) 200, Jijeong-myeon, Wonju-si, Gangwon-do, Republic of Korea
+    </div>
+    <div id="footer_contact" class="font3">
+      <br />&middot; Email:help@me-zoo.com &nbsp; &middot; Phone: +82-33-761-2006 &nbsp; &middot; Fax: +82-33-761-2036
+      <br><br>Copyright&copy; 2019 MEZOO.Co.Ltd.All rights reserved.
+    </div>
+    <div id="footer_logo">
+      <img src="http://me-zoo.com/theme/dalbit2/img/logo-white.png" width="100%">
+    </div>
+  </footer>
 
 </body>
 </html>
