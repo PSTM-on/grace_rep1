@@ -1,0 +1,247 @@
+h1{ font-size: calc(9px + 3.33rem) !important; line-height: calc(12px + 3.33rem) !important; } /*40px*/
+h2{ font-size: calc(9px + 2.08rem) !important; line-height: calc(12px + 2.08rem) !important; } /*25px*/
+h3{ font-size: calc(9px + 1.67rem) !important; line-height: calc(12px + 1.67rem) !important; } /*20px*/
+h4{ font-size: calc(9px + 1.50rem) !important; line-height: calc(20px + 1.50rem) !important; } /*18px*/
+h5{ font-size: calc(9px + 1.16rem) !important; line-height: calc(12px + 1.16rem) !important; } /*14px*/
+h6{ font-size: calc(9px + 0.83rem) !important; line-height: calc(12px + 0.83rem) !important; } /*10px*/
+
+.font1{ font-size: calc(6px + 4.15rem) !important; line-height: calc(12px + 4.15rem) !important; }
+.font2{ font-size: calc(6px + 1.50rem) !important; line-height: calc(12px + 1.50rem) !important; }
+.font3{ font-size: calc(6px + 1.00rem) !important; line-height: calc(12px + 1.00rem) !important; }
+.font4{ font-size: calc(6px + 0.91rem) !important; line-height: calc(12px + 0.91rem) !important; }
+
+/*Header*/
+@media screen and (max-width: 960px){
+  #main{
+    width: auto; margin: 0px; padding: 0px; height: 100vmin;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url("http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+  }
+  #main header{
+    height: 70px;
+    border-bottom: 1px solid rgba(217, 217, 217, 0.3);
+    overflow: hidden;
+  }
+  #menu_image{
+    margin-left: 15px; padding-top: 20px;
+    float: left;
+  }
+  #main #header_logo{
+    margin-left: 20px; padding-top: 20px;
+    width: 105px;
+    float: left;
+  }
+  #main #header_menu{
+    display: none;
+  }
+  #main section h1{
+    margin-top: 20vmin;
+  }
+  #main section h4{
+    margin-bottom: 5vmin;
+  }
+}
+
+@media screen and (min-width: 961px){
+  #main{
+    width: auto; margin: 0px; padding: 0px; height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url("http://me-zoo.com/theme/dalbit2/img/bg_mv3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+  }
+  #main header{
+    display: grid;
+    width: 100%; margin: 0px; padding: 0px;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 70px;
+    border-bottom: 1px solid rgba(217, 217, 217, 0.3);
+    overflow: hidden;
+  }
+  #menu_image{
+    display: none;
+  }
+  #header_logo{
+    padding-left: 15px; padding-top: 20px;
+  }
+  #header_menu{
+    width: 600px; height: 70px; padding: 0px;
+    margin: auto;
+  }
+  #header_menu #header_menu_item{
+    width: 100px; height: 70px; padding: 24px;
+    float: left; text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Bellota Text', cursive;
+  }
+  #header_menu #header_menu_item:hover{
+    color: rgba(217, 217, 217, 0.7);
+    transition-duration: 0.3s;
+  }
+  #main header{
+    overflow: hidden;
+  }
+  #main section h1{
+    margin-top: 200px;
+  }
+  #main section h4{
+    margin-bottom: 40px;
+  }
+}
+
+/*main_page*/
+#main section h1{
+  text-align: center;
+  color: white;
+  font-family: 'Bellota Text', cursive;
+}
+#main section h4{
+  margin-top: 10px;
+  text-align: center;
+  color: #c6c6c6;
+  font-family: 'Bellota Text', cursive;
+}
+#button_news{
+  width: 60px;
+  margin: 0 auto;
+}
+#button_news_text{
+  display: inline-block;
+  width: 100%; height: 35px;
+  background-color: #D53580;
+  border: none; border-radius: 15px;
+  text-align: center;
+  color: white;
+}
+#button_news_text:hover{
+  box-shadow: 0px 3px 4px 1px rgba(213, 53, 128, 0.4);
+  transition-duration: 0.2s;
+}
+
+/*Product Description*/
+#product_intro{
+  background-color: #ffffff;
+}
+.product_descript{
+  margin: 30px;
+  text-align: center;
+}
+.descript1{
+  margin: 0px; padding: 5px;
+  color: #D53580;
+  font-family: 'Bellota Text', cursive;
+}
+.descript2{
+  margin: 0px; padding: 5px;
+  color: #525252;
+  font-family: 'Bellota Text', cursive;
+}
+.descript3{
+  margin: 0px; padding: 5px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.product_image{
+  display: block;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+/*News*/
+#news{
+  box-sizing: border-box;
+  width: 100v%; margin: 0px; padding: 0px; height: 350px;
+  background-color: white;
+  }
+#news #title{
+  margin: 0px; padding-top: 10px;
+  text-align: center;
+  font-family: 'Bellota Text', cursive;
+}
+#news #descript{
+  margin: 0px; padding: 10px;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+#carousel{
+  margin: 10px auto;
+  width: 85vw; height: 265px;
+}
+#carousel .item{
+  position: relative;
+}
+#carousel .item .mic_background{
+  position: absolute;
+  margin-left: 5px;
+}
+#carousel .item .mic_icon{
+  position: relative;
+  left: 10px; top: 10px;
+}
+#carousel .item .item_border{
+  position: absolute;
+  top: 20px;
+  height: 160px;
+}
+
+/*Contact*/
+#contact{
+  box-sizing: border-box;
+  width: 100%; margin: 0px; padding: 0px; height: 350px;
+  background-image:url("http://me-zoo.com/theme/dalbit2/img/bg_footerTop2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  }
+#contact #title{
+  margin: 0 0 0 10px; padding-top: 50px; padding-left: 15px;
+  color: white;
+  font-family: 'Bellota Text', cursive;
+}
+#contact #content{
+  margin: 0 0 0 10px; padding-top: 40px; padding-left: 15px;
+  color: white; opacity: 0.9;
+  font-family: 'Noto Sans KR', sans-sans-serif;
+}
+#button_contact{
+  width: 20%; height: 25px;
+  margin: 35px 0 50px 10px;
+  padding-left: 10px;
+}
+#button_contact #email_button{
+  display: inline-block;
+  margin: 0;
+  width: 100%; height: 100% ;
+  background-color: white;
+  border: none; border-radius: 15px;
+  text-align: center;
+}
+#button_contact #email_button:hover{
+  box-shadow: 0px 6px 4px 3px rgba(146, 146, 146, 0.4);
+  transition-duration: 0.5s;
+}
+
+/*Footer*/
+#footer{
+  box-sizing: border-box;
+  width: 100%; margin: 0px; padding: 50px;
+  background-color: #3d3d3d;
+  }
+#footer_address{
+  text-align: center;
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+#footer_contact{
+  text-align: center;
+  color: #939393;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+#footer_logo{
+  padding-top: 30px; padding-bottom: 70px;
+  width:100px;
+  display: block;
+  margin: 0 auto;
+}
